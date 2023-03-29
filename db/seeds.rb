@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+100.times do  
+  contact = Contact.new(first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name,email: FFaker::Internet.email,phone_number: FFaker::PhoneNumber.phone_number)
+  contact.save
+end
